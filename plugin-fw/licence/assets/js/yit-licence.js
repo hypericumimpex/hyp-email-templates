@@ -30,7 +30,11 @@
                 error_fields       = new Array(),
                 product_row        = form.find( '.product-row' ),
                 licence_activation = $( '.licence-activation' ),
-                spinner            = $( '#products-to-active' ).find( '.spinner' );
+                spinner            = $( '#products-to-active' ).find( '.spinner' ),
+                is_mail            = function( val ){
+                    var re = /[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}/i;
+                    return re.test( val );
+                };
 
             /* Init Input Fields */
             message.empty();
@@ -41,10 +45,18 @@
             spinner.addClass( 'show' );
             t.add( licence_activation ).prop( "disabled", true ).addClass( 'clicked' );
 
-            if ( '' === email_val ) {
+            if ( '' === email_val || ! is_mail( email_val ) ) {
                 error = true;
-                error_fields[ error_fields.length ] = licence_message.email;
                 email.addClass( 'require' );
+
+                if( '' === email_val ){
+                    error_fields[ error_fields.length ] = licence_message.email;
+                }
+
+                else {
+                    error_fields[ error_fields.length ] = licence_message.email;
+                }
+
             }
 
             if ( '' === licence_key_val ) {
@@ -157,23 +169,25 @@
                                  },
                                  success: function ( response ) {
                                      message.css( 'maxWidth', activated_table.width() );
-                                     if ( false == response.activated && typeof response.error == 'undefined' ) {
-                                         $( '.product-licence-activation' ).empty().replaceWith( response.template );
-                                         licence_api();
-                                     }
-
-                                     if ( false == response.activated && typeof response.error != 'undefined' ) {
-                                         message.find( 'p.yith-licence-notice-message' ).html( response.error );
-                                         message.removeClass( 'notice-success' ).addClass( 'notice-error visible' );
-                                         t.add( renew ).add( deactive ).add( renew ).prop( "disabled", false ).removeClass( 'clicked' );
-                                         $( '#activated-products' ).find( '.spinner' ).removeClass( 'show' );
-                                     }
-
-                                     else if ( false == response ) {
+                                     if ( false == response ) {
                                          message.find( 'p.yith-licence-notice-message' ).html( licence_message.server );
                                          message.removeClass( 'notice-success' ).addClass( 'notice-error visible' );
                                          t.add( renew ).add( deactive ).add( renew ).prop( "disabled", false ).removeClass( 'clicked' );
                                          $( '#activated-products' ).find( '.spinner' ).removeClass( 'show' );
+                                     }
+
+                                     else {
+                                         if ( false == response.activated ) {
+                                             $( '.product-licence-activation' ).empty().replaceWith( response.template );
+                                             licence_api();
+                                         }
+
+                                         if ( typeof response.error != 'undefined' ) {
+                                             message.find( 'p.yith-licence-notice-message' ).html( response.error );
+                                             message.removeClass( 'notice-success' ).addClass( 'notice-error visible' );
+                                             t.add( renew ).add( deactive ).add( renew ).prop( "disabled", false ).removeClass( 'clicked' );
+                                             $( '#activated-products' ).find( '.spinner' ).removeClass( 'show' );
+                                         }
                                      }
                                  }
                              } );

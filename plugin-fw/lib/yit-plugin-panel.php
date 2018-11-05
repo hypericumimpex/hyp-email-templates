@@ -19,7 +19,7 @@ if ( !class_exists( 'YIT_Plugin_Panel' ) ) {
      * Setting Page to Manage Plugins
      *
      * @class      YIT_Plugin_Panel
-     * @package    Yithemes
+     * @package    YITH
      * @since      1.0
      * @author     Your Inspiration Themes
      */
@@ -158,7 +158,7 @@ if ( !class_exists( 'YIT_Plugin_Panel' ) ) {
 
                 //  YITH text must not be translated
                 if ( !!$show ) {
-                    add_menu_page( 'yith_plugin_panel', 'YITH', $capability, 'yith_plugin_panel', null, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', $position );
+                    add_menu_page( 'yith_plugin_panel', 'YITH', $capability, 'yith_plugin_panel', null, YIT_CORE_PLUGIN_URL . '/assets/images/yith-icon.svg', $position );
                     $admin_page_hooks[ 'yith_plugin_panel' ] = 'yith-plugins'; // prevent issues for backward compatibility
                 }
             }

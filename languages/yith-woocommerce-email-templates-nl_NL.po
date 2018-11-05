@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Email Templates\n"
-"POT-Creation-Date: 2018-05-10 18:17+0100\n"
-"PO-Revision-Date: 2018-05-10 18:17+0100\n"
+"POT-Creation-Date: 2018-10-09 12:07+0200\n"
+"PO-Revision-Date: 2018-10-31 18:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.13\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
 "_nx_noop:4c,1,2\n"
@@ -18,25 +18,25 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: plugin-fw\n"
 
-#: class.yith-wcet-admin-premium.php:88
+#: class.yith-wcet-admin-premium.php:94
 msgid "Duplicate"
-msgstr "Dupliceer"
+msgstr "Kopiëren"
 
-#: class.yith-wcet-admin-premium.php:113
+#: class.yith-wcet-admin-premium.php:119
 msgid "Copy"
 msgstr "Kopieer"
 
-#: class.yith-wcet-admin-premium.php:141 class.yith-wcet-admin.php:115
+#: class.yith-wcet-admin-premium.php:147 class.yith-wcet-admin.php:115
 #: functions.yith-wcet-premium.php:41
 msgid "Default"
 msgstr "Default"
 
-#: class.yith-wcet-admin-premium.php:172 functions.yith-wcet-premium.php:369
+#: class.yith-wcet-admin-premium.php:178 functions.yith-wcet-premium.php:373
 msgid "Social Network"
 msgstr "Sociaal Netwerk"
 
 #: class.yith-wcet-admin.php:132
-#: includes/class.yith-wcet-email-template-helper-premium.php:222
+#: includes/class.yith-wcet-email-template-helper-premium.php:287
 msgid "YITH WooCommerce Email Settings"
 msgstr "YITH WooCommerce Email Settings"
 
@@ -52,8 +52,7 @@ msgstr "E-mail sjabloon"
 msgid "Select the email template that you want to use for your emails!"
 msgstr "Selecteer het e-mail sjabloon dat u wilt gebruiken voor uw e-mails!"
 
-#: class.yith-wcet-admin.php:165 class.yith-wcet-admin.php:321
-#: class.yith-wcet-admin.php:322
+#: class.yith-wcet-admin.php:165
 msgid "Email Templates"
 msgstr "E-mail sjablonen"
 
@@ -85,15 +84,11 @@ msgstr "E-mail sjabloon niet gevonden in prullenbak"
 msgid "Template Options"
 msgstr "Sjabloon opties"
 
-#: class.yith-wcet-admin.php:268 class.yith-wcet-admin.php:312
+#: class.yith-wcet-admin.php:310
 msgid "Settings"
 msgstr "Instellingen"
 
-#: class.yith-wcet-admin.php:290
-msgid "Plugin Documentation"
-msgstr "Plugin Documentatie"
-
-#: class.yith-wcet-admin.php:313
+#: class.yith-wcet-admin.php:311
 msgid "Premium Version"
 msgstr "Premium Versie"
 
@@ -135,11 +130,11 @@ msgstr "E-mail sjabloon instellingen"
 msgid "Position"
 msgstr "Positie"
 
-#: functions.yith-wcet-premium.php:90 functions.yith-wcet-premium.php:127
+#: functions.yith-wcet-premium.php:90 functions.yith-wcet-premium.php:131
 msgid "Left"
 msgstr "Links"
 
-#: functions.yith-wcet-premium.php:92 functions.yith-wcet-premium.php:125
+#: functions.yith-wcet-premium.php:92 functions.yith-wcet-premium.php:129
 msgid "Right"
 msgstr "Rechts"
 
@@ -155,158 +150,158 @@ msgstr "Logo hoogte"
 msgid "Header Padding"
 msgstr "Header opvulling"
 
-#: functions.yith-wcet-premium.php:124
+#: functions.yith-wcet-premium.php:128
 msgid "Top"
 msgstr "Boven"
 
-#: functions.yith-wcet-premium.php:126
+#: functions.yith-wcet-premium.php:130
 msgid "Bottom"
 msgstr "Onder"
 
-#: functions.yith-wcet-premium.php:136
+#: functions.yith-wcet-premium.php:140
 msgid "Appearance"
 msgstr "Uiterlijk"
 
-#: functions.yith-wcet-premium.php:140 functions.yith-wcet.php:126
+#: functions.yith-wcet-premium.php:144 functions.yith-wcet.php:126
 msgid "Page Width"
 msgstr "Pagina breedte"
 
-#: functions.yith-wcet-premium.php:148
+#: functions.yith-wcet-premium.php:152
 msgid "Page Border Radius"
 msgstr "Pagina rand radius"
 
-#: functions.yith-wcet-premium.php:156 functions.yith-wcet.php:90
+#: functions.yith-wcet-premium.php:160 functions.yith-wcet.php:90
 msgid "Base Color"
 msgstr "Basiskleur"
 
-#: functions.yith-wcet-premium.php:165 functions.yith-wcet.php:99
+#: functions.yith-wcet-premium.php:169 functions.yith-wcet.php:99
 msgid "Body Color"
 msgstr "Hoofdtekst kleur"
 
-#: functions.yith-wcet-premium.php:174 functions.yith-wcet-premium.php:340
+#: functions.yith-wcet-premium.php:178 functions.yith-wcet-premium.php:344
 #: functions.yith-wcet.php:108
 msgid "Background Color"
 msgstr "Achtergrondkleur"
 
-#: functions.yith-wcet-premium.php:183 functions.yith-wcet.php:117
+#: functions.yith-wcet-premium.php:187 functions.yith-wcet.php:117
 msgid "Text Color"
 msgstr "Tekstkleur"
 
-#: functions.yith-wcet-premium.php:192
+#: functions.yith-wcet-premium.php:196
 msgid "Header Color"
 msgstr "Koptekst kleur"
 
-#: functions.yith-wcet-premium.php:201
+#: functions.yith-wcet-premium.php:205
 msgid "Footer Text Color"
 msgstr "Voettekst kleur"
 
-#: functions.yith-wcet-premium.php:212
+#: functions.yith-wcet-premium.php:216
 msgid "Typography"
 msgstr "Typografie"
 
-#: functions.yith-wcet-premium.php:216
+#: functions.yith-wcet-premium.php:220
 msgid "Heading 1 Font Size"
 msgstr "Titel 1 lettertype formaat"
 
-#: functions.yith-wcet-premium.php:224
+#: functions.yith-wcet-premium.php:228
 msgid "Heading 2 Font Size"
 msgstr "Titel 2 lettertype formaat"
 
-#: functions.yith-wcet-premium.php:232
+#: functions.yith-wcet-premium.php:236
 msgid "Heading 3 Font Size"
 msgstr "Titel 3 lettertype formaat"
 
-#: functions.yith-wcet-premium.php:240
+#: functions.yith-wcet-premium.php:244
 msgid "Body Font Size"
 msgstr "Hoofdtekst lettertype formaat"
 
-#: functions.yith-wcet-premium.php:248
+#: functions.yith-wcet-premium.php:252
 msgid "Body Line Height"
 msgstr "Hoofdtekst lijn hoogte"
 
-#: functions.yith-wcet-premium.php:258
+#: functions.yith-wcet-premium.php:262
 msgid "Custom Links"
 msgstr "Aangepaste links"
 
-#: functions.yith-wcet-premium.php:263
+#: functions.yith-wcet-premium.php:267
 msgctxt "Text for Add Custom Link button"
 msgid "Add Custom Link"
 msgstr "Aangepaste link toevoegen"
 
-#: functions.yith-wcet-premium.php:269 functions.yith-wcet-premium.php:293
+#: functions.yith-wcet-premium.php:273 functions.yith-wcet-premium.php:297
 msgctxt "Text for the custom link"
 msgid "Link Text"
 msgstr "Link tekst"
 
-#: functions.yith-wcet-premium.php:275 functions.yith-wcet-premium.php:300
+#: functions.yith-wcet-premium.php:279 functions.yith-wcet-premium.php:304
 msgctxt "Url for the custom link"
 msgid "Link URL"
 msgstr "Link URL"
 
-#: functions.yith-wcet-premium.php:282 functions.yith-wcet-premium.php:307
+#: functions.yith-wcet-premium.php:286 functions.yith-wcet-premium.php:311
 msgctxt "Text for Remove Custom Link button"
 msgid "Remove"
 msgstr "Verwijder"
 
-#: functions.yith-wcet-premium.php:319
+#: functions.yith-wcet-premium.php:323
 msgid "Order detail table"
 msgstr "Order detail tabel"
 
-#: functions.yith-wcet-premium.php:323
+#: functions.yith-wcet-premium.php:327
 msgid "Border Width"
 msgstr "Rand breedte"
 
-#: functions.yith-wcet-premium.php:331
+#: functions.yith-wcet-premium.php:335
 msgid "Border Color"
 msgstr "Randkleur"
 
-#: functions.yith-wcet-premium.php:349
+#: functions.yith-wcet-premium.php:353
 msgid "Price Title Background Color"
 msgstr "Prijs titel achtergrondkleur"
 
-#: functions.yith-wcet-premium.php:358
+#: functions.yith-wcet-premium.php:362
 msgid "Show product thumbnails"
 msgstr "Toon product thumbnails"
 
-#: functions.yith-wcet-premium.php:373
+#: functions.yith-wcet-premium.php:377
 msgid "You can set your social network links in "
 msgstr "U kunt de sociale netwerk links instellen in "
 
-#: functions.yith-wcet-premium.php:374
+#: functions.yith-wcet-premium.php:379
 msgid "YIT Plugins -> Email Templates -> Social Network"
 msgstr "YIT Plugins -> Email Sjablonen -> Social Netwerk"
 
-#: functions.yith-wcet-premium.php:381
+#: functions.yith-wcet-premium.php:386
 msgid "Social network buttons in the header"
 msgstr "Sociaal netwerk knop in header"
 
-#: functions.yith-wcet-premium.php:389
+#: functions.yith-wcet-premium.php:394
 msgid "Social network buttons in the footer"
 msgstr "Sociaal netwerk knop in voettekst"
 
-#: functions.yith-wcet-premium.php:397
+#: functions.yith-wcet-premium.php:402
 msgid "Social network buttons color"
 msgstr "Sociaal netwerk knopkleur"
 
-#: functions.yith-wcet-premium.php:402
+#: functions.yith-wcet-premium.php:407
 msgctxt "Black color for Socials Icons"
 msgid "Black"
 msgstr "Zwart"
 
-#: functions.yith-wcet-premium.php:404
+#: functions.yith-wcet-premium.php:409
 msgctxt "White color for Socials Icons"
 msgid "White"
 msgstr "Wit"
 
-#: functions.yith-wcet-premium.php:412 templates/premium.php:317
+#: functions.yith-wcet-premium.php:417 templates/premium.php:317
 msgid "Footer"
 msgstr "Voettekst"
 
-#: functions.yith-wcet-premium.php:416
+#: functions.yith-wcet-premium.php:421
 msgid "Left Logo"
 msgstr "Links logo"
 
-#: functions.yith-wcet-premium.php:431
+#: functions.yith-wcet-premium.php:436
 msgid ""
 "[Upload a new logo, or select the default logo you have set in \"Email "
 "Templates Settings\"]"
@@ -314,49 +309,61 @@ msgstr ""
 "[Upload een nieuw logo, of selecteer het default logo dat u heeft ingesteld "
 "in \"Email Templates Settings\"]"
 
-#: functions.yith-wcet-premium.php:436
+#: functions.yith-wcet-premium.php:441
 msgid "Footer Text"
 msgstr "Tekst voettekst"
 
-#: functions.yith-wcet-premium.php:446 functions.yith-wcet-premium.php:450
+#: functions.yith-wcet-premium.php:451 functions.yith-wcet-premium.php:455
+msgid "Additional CSS"
+msgstr "Extra CSS"
+
+#: functions.yith-wcet-premium.php:463
+msgid ""
+"Please consider this code snippet will be part of an email, so some CSS code "
+"snippets could not work on any email client"
+msgstr ""
+"Overweeg dan dit codefragment zal deel uitmaken van een e-mail, dus sommige "
+"CSS-codesnippets niet kon werken op een e-mail client"
+
+#: functions.yith-wcet-premium.php:468 functions.yith-wcet-premium.php:472
 #: functions.yith-wcet.php:135 functions.yith-wcet.php:139
 msgid "Preview"
 msgstr "Voorbeeld"
 
-#: functions.yith-wcet-premium.php:454 functions.yith-wcet.php:143
+#: functions.yith-wcet-premium.php:475 functions.yith-wcet.php:143
 msgid "Preview Template"
 msgstr "Voorbeeld sjabloon"
 
-#: functions.yith-wcet-premium.php:460
-#: includes/class.yith-wcet-email-template-helper-premium.php:55
+#: functions.yith-wcet-premium.php:482 functions.yith-wcet-premium.php:486
+#: includes/class.yith-wcet-email-template-helper-premium.php:120
 msgid "Test Email"
 msgstr "Test e-mail"
 
-#: functions.yith-wcet-premium.php:463
+#: functions.yith-wcet-premium.php:489
 msgid "Send to..."
 msgstr "Verzenden naar..."
 
-#: functions.yith-wcet-premium.php:464
+#: functions.yith-wcet-premium.php:490
 msgid "Send"
 msgstr "Verzenden"
 
-#: functions.yith-wcet-premium.php:470 functions.yith-wcet.php:146
+#: functions.yith-wcet-premium.php:496
 msgid ""
-"[You need to publish or update the template before displaying the correct "
-"preview]"
+"[You need to publish or update the template before sending the correct test "
+"email]"
 msgstr ""
 "[U moet op publish of update klikken voodat u het juiste voorbeeld van het "
 "sjabloon te zien krijgt]"
 
-#: functions.yith-wcet-premium.php:496 functions.yith-wcet.php:169
+#: functions.yith-wcet-premium.php:522 functions.yith-wcet.php:171
 msgid "Upload"
 msgstr "Upload"
 
-#: functions.yith-wcet-premium.php:498 functions.yith-wcet.php:170
+#: functions.yith-wcet-premium.php:524 functions.yith-wcet.php:172
 msgid "My Default Logo"
 msgstr "Mijn default logo"
 
-#: functions.yith-wcet-premium.php:503
+#: functions.yith-wcet-premium.php:529
 msgid "Use Header Logo"
 msgstr "Gebruik header logo"
 
@@ -368,33 +375,41 @@ msgstr "Header logo"
 msgid "Style Options"
 msgstr "Stijl opties"
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:46
-#: includes/class.yith-wcet-email-template-helper.php:249
+#: functions.yith-wcet.php:147
+msgid ""
+"[You need to publish or update the template before displaying the correct "
+"preview]"
+msgstr ""
+"[U moet op publish of update klikken voodat u het juiste voorbeeld van het "
+"sjabloon te zien krijgt]"
+
+#: includes/class.yith-wcet-email-template-helper-premium.php:111
+#: includes/class.yith-wcet-email-template-helper.php:266
 msgid "HTML Email Template"
 msgstr "HTML E-mail sjabloon"
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:59
+#: includes/class.yith-wcet-email-template-helper-premium.php:124
 msgid "Email sent"
 msgstr "E-mail verzonden"
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:63
-#: includes/class.yith-wcet-email-template-helper-premium.php:68
+#: includes/class.yith-wcet-email-template-helper-premium.php:128
+#: includes/class.yith-wcet-email-template-helper-premium.php:133
 msgid "Error: Email not sent"
 msgstr "Fout: E-mail is niet verzonden"
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:168
+#: includes/class.yith-wcet-email-template-helper-premium.php:233
 #: templates/emails/woocommerce2.4/emails/admin-new-order.php:31
 #: templates/views/html-email-template-preview.php:26
 #, php-format
 msgid "You have received an order from %s. The order is as follows:"
 msgstr "U heeft een order ontvangen van %s. De order ziet er als volgt uit:"
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:168
+#: includes/class.yith-wcet-email-template-helper-premium.php:233
 #: templates/views/html-email-template-preview.php:26
 msgid "User"
 msgstr "Gebruiker"
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:216
+#: includes/class.yith-wcet-email-template-helper-premium.php:281
 #, php-format
 msgid ""
 "Please note: you can manage your email templates through the %sEmail "
@@ -402,14 +417,21 @@ msgid ""
 msgstr ""
 "Let op: U kunt uw e-mail sjablonen beheren via het %sE-mail Sjablonen%s menu."
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:224
+#: includes/class.yith-wcet-email-template-helper-premium.php:289
 msgid "Select templates for emails."
 msgstr "Selecteer sjablonen voor e-mails."
 
-#: includes/class.yith-wcet-email-template-helper-premium.php:239
+#: includes/class.yith-wcet-email-template-helper-premium.php:304
+#: includes/class.yith-wcet-email-template-helper-premium.php:315
 #, php-format
 msgid "Select the email template that you want to use for the %s email"
 msgstr "Selecteer het e-mail sjabloon dat u wilt gebruiken voor de %s e-mail."
+
+#: includes/class.yith-wcet-email-template-helper-premium.php:313
+#: includes/class.yith-wcet-email-template-helper-premium.php:315
+#: includes/class.yith-wcet-wp-email.php:18
+msgid "WordPress Emails"
+msgstr "WordPress Emails"
 
 #: init.php:52
 msgid ""
@@ -449,73 +471,51 @@ msgstr ""
 "Gebruik altijd sociaal netwerk mini-icoontjes (30x30 px) in alle e-mail "
 "sjablonen."
 
+#: plugin-options/socials-options.php:4
+msgid "Facebook"
+msgstr "Facebook"
+
+#: plugin-options/socials-options.php:5
+msgid "Twitter"
+msgstr "Twitter"
+
+#: plugin-options/socials-options.php:6
+msgid "Google+"
+msgstr "Google+"
+
+#: plugin-options/socials-options.php:7
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
 #: plugin-options/socials-options.php:8
+msgid "Instagram"
+msgstr "Instagram"
+
+#: plugin-options/socials-options.php:9
+msgid "Flickr"
+msgstr "Flickr"
+
+#: plugin-options/socials-options.php:10
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: plugin-options/socials-options.php:11
+msgid "Youtube"
+msgstr "Youtube"
+
+#: plugin-options/socials-options.php:16
 msgid "Social Network Sites Options"
 msgstr "Sociale netwerk sites opties."
 
-#: plugin-options/socials-options.php:16
-msgid "Facebook Page Url"
-msgstr "Facebook Pagina Url"
-
-#: plugin-options/socials-options.php:18
-msgid "Enter your Facebook page URL without http://"
-msgstr "Vul uw Facebook pagina URL in zonder http://"
-
 #: plugin-options/socials-options.php:23
-msgid "Twitter Profile Url"
-msgstr "Twitter Profiel Url"
+#, php-format
+msgid "%s Profile Url"
+msgstr "%s Profile Url"
 
-#: plugin-options/socials-options.php:25
-msgid "Enter your Twitter profile URL without http://"
-msgstr "Vul uw Twitter profiel URL in zonder http://"
-
-#: plugin-options/socials-options.php:30
-msgid "Google+ Profile Url"
-msgstr "Google+ Profiel Url"
-
-#: plugin-options/socials-options.php:32
-msgid "Enter your Google+ profile URL without http://"
-msgstr "Vul uw Google+ profiel URL in zonder http://"
-
-#: plugin-options/socials-options.php:37
-msgid "LinkedIn Profile Url"
-msgstr "LinkedIn Profiel Url"
-
-#: plugin-options/socials-options.php:39
-msgid "Enter your LinkedIn profile URL without http://"
-msgstr "Vul uw LinkedIn profiel URL in zonder http://"
-
-#: plugin-options/socials-options.php:44
-msgid "Instagram Profile Url"
-msgstr "Instagram Profiel Url"
-
-#: plugin-options/socials-options.php:46
-msgid "Enter your Instagram profile URL without http://"
-msgstr "Vul uw Instagram profiel URL in zonder http://"
-
-#: plugin-options/socials-options.php:51
-msgid "Flickr Profile Url"
-msgstr "Flickr Profiel Url"
-
-#: plugin-options/socials-options.php:53
-msgid "Enter your Flickr profile URL without http://"
-msgstr "Vul uw Flickr profiel URL in zonder http://"
-
-#: plugin-options/socials-options.php:58
-msgid "Pinterest Profile Url"
-msgstr "Pinterest Profiel Url"
-
-#: plugin-options/socials-options.php:60
-msgid "Enter your Pinterest profile URL without http://"
-msgstr "Vul uw Pinterest profiel URL in zonder http://"
-
-#: plugin-options/socials-options.php:65
-msgid "Youtube Profile Url"
-msgstr "Youtube Profiel Url"
-
-#: plugin-options/socials-options.php:67
-msgid "Enter your Youtube profile URL without http://"
-msgstr "Voer je Youtube profiel URL in zonder http://"
+#: plugin-options/socials-options.php:29
+#, php-format
+msgid "%s Custom Icon"
+msgstr "%s Aangepast icoon"
 
 #: templates/emails/woocommerce2.4/emails/admin-cancelled-order.php:25
 #, php-format
@@ -534,7 +534,7 @@ msgstr "Order: %s"
 #: templates/emails/woocommerce2.4/emails/customer-note.php:43
 #: templates/emails/woocommerce2.4/emails/customer-processing-order.php:39
 #: templates/emails/woocommerce2.5/emails/email-order-details.php:29
-#: templates/views/html-email-template-preview.php:33
+#: templates/views/html-email-template-preview.php:35
 msgid "Product"
 msgstr "Product"
 
@@ -545,7 +545,7 @@ msgstr "Product"
 #: templates/emails/woocommerce2.4/emails/customer-note.php:44
 #: templates/emails/woocommerce2.4/emails/customer-processing-order.php:40
 #: templates/emails/woocommerce2.5/emails/email-order-details.php:30
-#: templates/views/html-email-template-preview.php:34
+#: templates/views/html-email-template-preview.php:36
 msgid "Quantity"
 msgstr "Quantity"
 
@@ -556,7 +556,7 @@ msgstr "Quantity"
 #: templates/emails/woocommerce2.4/emails/customer-note.php:45
 #: templates/emails/woocommerce2.4/emails/customer-processing-order.php:41
 #: templates/emails/woocommerce2.5/emails/email-order-details.php:31
-#: templates/views/html-email-template-preview.php:35
+#: templates/views/html-email-template-preview.php:37
 msgid "Price"
 msgstr "Prijs"
 
@@ -565,9 +565,10 @@ msgstr "Prijs"
 #: templates/emails/woocommerce2.4/emails/customer-invoice.php:38
 #: templates/emails/woocommerce2.4/emails/customer-note.php:38
 #: templates/emails/woocommerce2.4/emails/customer-processing-order.php:34
-#: templates/emails/woocommerce2.5/emails/email-order-details.php:45
-#: templates/emails/woocommerce2.5/emails/email-order-details.php:48
-#: templates/emails/woocommerce3.2/emails/email-order-details.php:48
+#: templates/emails/woocommerce2.5/emails/email-order-details.php:46
+#: templates/emails/woocommerce2.5/emails/email-order-details.php:49
+#: templates/emails/woocommerce3.2/emails/email-order-details.php:49
+#: templates/emails/woocommerce3.4/emails/email-order-details.php:49
 #: templates/views/html-email-template-preview.php:28
 #, php-format
 msgid "Order #%s"
@@ -665,12 +666,8 @@ msgstr "Factuuradres"
 msgid "Shipping address"
 msgstr "Afleveradres"
 
-#: templates/emails/woocommerce2.4/emails/email-items-list.php:36
-msgid "Your Vote"
-msgstr "Uw stem"
-
 #: templates/emails/woocommerce2.4/emails/email-order-items.php:25
-#: templates/views/html-email-template-preview.php:72
+#: templates/views/html-email-template-preview.php:74
 msgid "Product Image"
 msgstr "Productafbeelding"
 
@@ -683,7 +680,8 @@ msgstr "Download %d"
 msgid "Download"
 msgstr "Download"
 
-#: templates/emails/woocommerce3.2/emails/email-order-details.php:149
+#: templates/emails/woocommerce3.2/emails/email-order-details.php:151
+#: templates/emails/woocommerce3.4/emails/email-order-details.php:151
 msgid "Note:"
 msgstr "Notitie:"
 
@@ -802,32 +800,74 @@ msgstr ""
 "kunt zelfs een andere gebruiken dan die u eerder heeft gebruik het bovenste "
 "deel van de e-mail.%3$sNu is het sjabloon echt compleet op ieder vlak!"
 
-#: templates/views/html-email-template-preview.php:93
-#: templates/views/html-email-template-preview.php:146
+#: templates/views/html-email-template-preview.php:95
+#: templates/views/html-email-template-preview.php:148
 msgid "Subtotal"
 msgstr "Subtotaal"
 
-#: templates/views/html-email-template-preview.php:97
-#: templates/views/html-email-template-preview.php:150
+#: templates/views/html-email-template-preview.php:99
+#: templates/views/html-email-template-preview.php:152
 msgid "Shipping"
 msgstr "Verzending"
 
-#: templates/views/html-email-template-preview.php:98
-#: templates/views/html-email-template-preview.php:151
+#: templates/views/html-email-template-preview.php:100
+#: templates/views/html-email-template-preview.php:153
 msgid "Free Shipping"
 msgstr "Gratis verzending"
 
-#: templates/views/html-email-template-preview.php:101
-#: templates/views/html-email-template-preview.php:154
+#: templates/views/html-email-template-preview.php:103
+#: templates/views/html-email-template-preview.php:156
 msgid "Payment"
 msgstr "Betaling"
 
-#: templates/views/html-email-template-preview.php:102
-#: templates/views/html-email-template-preview.php:155
+#: templates/views/html-email-template-preview.php:104
+#: templates/views/html-email-template-preview.php:157
 msgid "Paypal"
 msgstr "PayPal"
 
-#: templates/views/html-email-template-preview.php:105
-#: templates/views/html-email-template-preview.php:158
+#: templates/views/html-email-template-preview.php:107
+#: templates/views/html-email-template-preview.php:160
 msgid "Total"
 msgstr "Totaal"
+
+#~ msgid "Plugin Documentation"
+#~ msgstr "Plugin Documentatie"
+
+#~ msgid "Enter your Facebook page URL without http://"
+#~ msgstr "Vul uw Facebook pagina URL in zonder http://"
+
+#~ msgid "Twitter Profile Url"
+#~ msgstr "Twitter Profiel Url"
+
+#~ msgid "Enter your Twitter profile URL without http://"
+#~ msgstr "Vul uw Twitter profiel URL in zonder http://"
+
+#~ msgid "Google+ Profile Url"
+#~ msgstr "Google+ Profiel Url"
+
+#~ msgid "Enter your Google+ profile URL without http://"
+#~ msgstr "Vul uw Google+ profiel URL in zonder http://"
+
+#~ msgid "LinkedIn Profile Url"
+#~ msgstr "LinkedIn Profiel Url"
+
+#~ msgid "Enter your LinkedIn profile URL without http://"
+#~ msgstr "Vul uw LinkedIn profiel URL in zonder http://"
+
+#~ msgid "Enter your Instagram profile URL without http://"
+#~ msgstr "Vul uw Instagram profiel URL in zonder http://"
+
+#~ msgid "Enter your Flickr profile URL without http://"
+#~ msgstr "Vul uw Flickr profiel URL in zonder http://"
+
+#~ msgid "Enter your Pinterest profile URL without http://"
+#~ msgstr "Vul uw Pinterest profiel URL in zonder http://"
+
+#~ msgid "Youtube Profile Url"
+#~ msgstr "Youtube Profiel Url"
+
+#~ msgid "Enter your Youtube profile URL without http://"
+#~ msgstr "Voer je Youtube profiel URL in zonder http://"
+
+#~ msgid "Your Vote"
+#~ msgstr "Uw stem"

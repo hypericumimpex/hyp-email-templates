@@ -46,13 +46,13 @@ $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'prem
                 'img'   => $img_path . '1.jpg',
                 'name'  => 'Test 1',
                 'qty'   => '1',
-                'price' => '$30.00'
+                'price' => wc_price( 30 )
             ),
             array(
                 'img'   => $img_path . '2.jpg',
                 'name'  => 'Test 2',
                 'qty'   => '3',
-                'price' => '$23.00'
+                'price' => wc_price( 23 )
             ),
         );
 
@@ -76,7 +76,7 @@ $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'prem
                             }
                             // Product name
                             echo '<td class="yith-wcet-no-border" style="vertical-align:middle; padding: 0 !important;">';
-                            echo apply_filters( 'woocommerce_order_item_name', $item[ 'name' ], $item );
+                            echo $item[ 'name' ];
                             echo '</td>';
                             ?>
                         </tr>
@@ -93,7 +93,7 @@ $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'prem
             $totals  = array(
                 array(
                     'label' => __( 'Subtotal', 'woocommerce' ),
-                    'value' => '$99,00'
+                    'value' => wc_price( 99 )
                 ),
                 array(
                     'label' => __( 'Shipping', 'woocommerce' ),
@@ -105,7 +105,7 @@ $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'prem
                 ),
                 array(
                     'label' => __( 'Total', 'woocommerce' ),
-                    'value' => '$99,00'
+                    'value' => wc_price( 99 )
                 ),
             );
             $i       = 0;
@@ -146,7 +146,7 @@ $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'prem
                     $totals  = array(
                         array(
                             'label' => __( 'Subtotal', 'woocommerce' ),
-                            'value' => '$99,00'
+                            'value' => wc_price( 99 )
                         ),
                         array(
                             'label' => __( 'Shipping', 'woocommerce' ),
@@ -158,7 +158,7 @@ $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'prem
                         ),
                         array(
                             'label' => __( 'Total', 'woocommerce' ),
-                            'value' => '$99,00'
+                            'value' => wc_price( 99 )
                         ),
                     );
                     $i       = 0;
