@@ -15,7 +15,7 @@
  * @package HYP Email Templates
  * @version 1.3.15
  */
-/*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
+/*  Copyright 2019  Hypericum Impex
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
