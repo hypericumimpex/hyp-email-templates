@@ -45,6 +45,7 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper_Premium' ) ) {
 
         /**
          * get the YITH_WCET_WP_Email
+         *
          * @return bool|YITH_WCET_WP_Email
          */
         public function get_wp_email() {
@@ -74,25 +75,102 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper_Premium' ) ) {
                     break;
                 }
             }
-            return $is_wc_email;
+            return apply_filters( 'yith_wcet_check_email_is_wc_email', $is_wc_email, $message );
+        }
+
+        /**
+         * return true if the message is already in HTML format
+         *
+         * @param string $message
+         *
+         * @since 1.3.15
+         * @return bool
+         */
+        public function is_already_html( $message = '' ) {
+            $is_already_html          = false;
+            $check_html_email_strings = array(
+                '<html>',
+                '<html ',
+                '<head>',
+                '<head ',
+                '<body>',
+                '<body ',
+            );
+            foreach ( $check_html_email_strings as $string ) {
+                if ( strpos( $message, $string ) !== false ) {
+                    $is_already_html = true;
+                    break;
+                }
+            }
+            return apply_filters( 'yith_wcet_check_email_is_already_html', $is_already_html, $message );
+        }
+
+
+        /**
+         * add content type in headers and return headers
+         *
+         * @param array|string $headers
+         * @param string       $content_type
+         *
+         * @return array|string
+         */
+        public function add_content_type_in_headers( $headers, $content_type ) {
+            $headers = !!$headers ? $headers : '';
+
+            if ( is_array( $headers ) ) {
+                $headers[ 'Content-Type' ] = $content_type;
+            } else {
+                $content_type_text = 'Content-Type:' . $content_type . "\r\n";
+                if ( strpos( strtolower( $headers ), 'content-type' ) ) {
+                    $headers = preg_replace( '/content-type.+\\n/i', $content_type_text, $headers );
+                } else {
+                    $headers = $content_type_text . $headers;
+                }
+            }
+
+            return $headers;
+        }
+
+        /**
+         * is content type plain in headers?
+         *
+         * @param $headers
+         *
+         * @return bool
+         */
+        public function header_content_type_is_plain( $headers ) {
+            if ( is_array( $headers ) && isset( $headers[ 'Content-Type' ] ) && 'text/plain' !== $headers[ 'Content-Type' ] ) {
+                return false;
+            }
+            if ( is_string( $headers ) && $headers && !strpos( strtolower( $headers ), 'text/plain' ) ) {
+                return false;
+            }
+            return true;
         }
 
         /**
          * @param array $args
          *
-         * @return mixed|void
+         * @return array
          */
         public function filter_wp_email_args( $args = array() ) {
             $template = get_option( 'yith-wcet-email-template-yith_wcet_wp_email', 'default' );
-            if ( $template !== 'default' && isset( $args[ 'subject' ] ) && isset( $args[ 'message' ] ) && !$this->is_wc_email( $args[ 'message' ] ) ) {
+            if ( $template !== 'default' && isset( $args[ 'subject' ] ) && isset( $args[ 'message' ] ) && !$this->is_wc_email( $args[ 'message' ] ) && !$this->is_already_html( $args[ 'message' ] ) ) {
                 WC()->mailer();
 
                 $email_heading = apply_filters( 'yith_wcet_wp_email_subject', $args[ 'subject' ], $args );
                 $email         = $this->get_wp_email();
 
+                // set content type in headers
+                $headers           = !empty( $args[ 'headers' ] ) ? $args[ 'headers' ] : '';
+                $was_plain         = $this->header_content_type_is_plain( $headers );
+                $args[ 'headers' ] = $this->add_content_type_in_headers( $headers, $email->get_content_type() );
+                $message           = $was_plain ? nl2br( $args[ 'message' ] ) : $args[ 'message' ];
+                $message           = apply_filters( 'yith_wcet_wordpress_email_message', $message, $args );
+
                 ob_start();
                 do_action( 'woocommerce_email_header', $email_heading, $email );
-                echo $args[ 'message' ];
+                echo $message;
                 do_action( 'woocommerce_email_footer', $email );
                 $args[ 'message' ] = $this->mail_content_styling( ob_get_clean() );
 

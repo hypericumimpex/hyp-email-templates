@@ -17,6 +17,7 @@ if ( !class_exists( 'YITH_WCET_WP_Email' ) ) :
             $this->customer_email = true;
             $this->title          = __( 'WordPress Emails', 'yith-woocommerce-email-templates' );
             $this->customer_email = false;
+            $this->email_type     = 'html';
 
             // Call parent constructor
             parent::__construct();

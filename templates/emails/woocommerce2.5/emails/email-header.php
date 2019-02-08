@@ -34,8 +34,9 @@ $socials_color = ( isset( $meta[ 'socials_color' ] ) ) ? '-' . $meta[ 'socials_c
 
 $page_width = ( isset( $meta[ 'page_width' ] ) ) ? $meta[ 'page_width' ] . 'px' : '800px';
 
-$logo_url = ( isset( $meta[ 'logo_url' ] ) ) ? $meta[ 'logo_url' ] : '';
-$logo_url = apply_filters( 'yith_wcet_header_logo_url', $logo_url, $current_email );
+$logo_url    = ( isset( $meta[ 'logo_url' ] ) ) ? $meta[ 'logo_url' ] : '';
+$logo_url    = apply_filters( 'yith_wcet_header_logo_url', $logo_url, $current_email );
+$logo_height = ( isset( $meta[ 'logo_height' ] ) ) ? $meta[ 'logo_height' ] : '100'; // height is set without 'px' to prevent issues on Outlook
 
 $use_mini_social_icons = get_option( 'yith-wcet-use-mini-social-icons', 'no' ) == 'yes';
 $social_icon_path      = YITH_WCET_ASSETS_URL . '/images/socials-icons';
@@ -46,23 +47,14 @@ $social_icon_path = apply_filters( 'yith_wcet_social_icon_path', $social_icon_pa
 $custom_logo = apply_filters( 'yith_wcet_header_custom_logo', false );
 
 
-$social_icons               = array(
-    'facebook'  => get_option( 'yith-wcet-facebook' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-facebook' ) ) : '',
-    'twitter'   => get_option( 'yith-wcet-twitter' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-twitter' ) ) : '',
-    'google'    => get_option( 'yith-wcet-google' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-google' ) ) : '',
-    'linkedin'  => get_option( 'yith-wcet-linkedin' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-linkedin' ) ) : '',
-    'instagram' => get_option( 'yith-wcet-instagram' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-instagram' ) ) : '',
-    'flickr'    => get_option( 'yith-wcet-flickr' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-flickr' ) ) : '',
-    'pinterest' => get_option( 'yith-wcet-pinterest' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-pinterest' ) ) : '',
-    'youtube'   => get_option( 'yith-wcet-youtube' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-youtube' ) ) : '',
-);
-$at_least_one_social_setted = false;
-foreach ( $social_icons as $social_name => $social_link ) {
-    if ( strlen( $social_link ) > 0 ) {
-        $at_least_one_social_setted = true;
-        break;
-    }
-}
+$social_icons            = yith_wcet_get_socials();
+$at_least_one_social_set = !!array_filter( $social_icons );
+
+$outlook_style = "<!--[if gte mso 9]>";
+$outlook_style .= "<yith-wccet-style type='text/css'>";
+$outlook_style .= "#template_container {width: {$page_width} !important}";
+$outlook_style .= "</yith-wccet-style>";
+$outlook_style .= "<![endif]-->";
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -73,7 +65,7 @@ foreach ( $social_icons as $social_name => $social_link ) {
 
     <?php do_action( 'yith_wcet_header_after_head', $current_email, $template ); ?>
 
-    <yith-wccet-inline-style type="text/css">
+    <yith-wccet-style type="text/css">
         @media (min-width:500px){
         #template_container {
         width : 100%;
@@ -89,16 +81,12 @@ foreach ( $social_icons as $social_name => $social_link ) {
         width : 0 !important;
         }
 
-    </yith-wccet-inline-style>
+        <?php do_action( 'yith_wcet_header_after_style', $current_email, $template ); ?>
 
-    <!--[if gte mso 9]>
-    <style type="text/css">
-        #template_container {
-            width : < ? php echo $ page_width ? >;
-        !important
-        }
-    </style>
-    <![endif]-->
+    </yith-wccet-style>
+
+    <?php echo $outlook_style; ?>
+
 </head>
 <?php do_action( 'yith_wcet_header_before_body', $current_email, $template ); ?>
 
@@ -139,7 +127,7 @@ foreach ( $social_icons as $social_name => $social_link ) {
                                 <table id="template_header_image" class="yith-wcet-max-width-mobile" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <?php echo '<img src="' . esc_url( $logo_url ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" />'; ?>
+                                            <?php echo '<img src="' . esc_url( $logo_url ) . '" height="' . $logo_height . '" alt="' . get_bloginfo( 'name', 'display' ) . '" />'; ?>
                                         </td>
                                     </tr>
                                 </table>
@@ -164,7 +152,7 @@ foreach ( $social_icons as $social_name => $social_link ) {
                             <!-- End Header -->
                         </td>
                     </tr>
-                    <?php if ( count( $custom_links_array ) > 0 || ( $socials_on_header && $at_least_one_social_setted ) ) { ?>
+                    <?php if ( count( $custom_links_array ) > 0 || ( $socials_on_header && $at_least_one_social_set ) ) { ?>
 
                         <tr>
                             <td align="center" valign="top">
@@ -193,7 +181,7 @@ foreach ( $social_icons as $social_name => $social_link ) {
                                                                 }
                                                                 ?>
                                                                 <td width="32px" style="padding:1px" class="yith-wcet-socials-icons" style="text-align:center;">
-                                                                    <a href="<?php echo $social_link ?>"><img src="<?php echo $social_url ?>"></a>
+                                                                    <a href="<?php echo $social_link ?>"><img width="30" height="30" src="<?php echo $social_url ?>"></a>
                                                                 </td>
                                                             <?php } ?>
                                                         <?php endforeach; ?>

@@ -1,6 +1,7 @@
 <?php
 /**
  * Email Styles
+ *
  * @version 3.5.0
  */
 
@@ -22,11 +23,12 @@ $defaults = array(
     'txt_color'  => get_option( 'woocommerce_email_text_color', '#000000' ),
 );
 
-$bg        = ( isset( $meta[ 'bg_color' ] ) ) ? $meta[ 'bg_color' ] : $defaults[ 'bg_color' ];
-$body      = ( isset( $meta[ 'body_color' ] ) ) ? $meta[ 'body_color' ] : $defaults[ 'body_color' ];
-$base      = ( isset( $meta[ 'base_color' ] ) ) ? $meta[ 'base_color' ] : $defaults[ 'base_color' ];
-$base_text = wc_light_or_dark( $base, '#202020', '#ffffff' );
-$text      = ( isset( $meta[ 'txt_color' ] ) ) ? $meta[ 'txt_color' ] : $defaults[ 'txt_color' ];
+$bg         = ( isset( $meta[ 'bg_color' ] ) ) ? $meta[ 'bg_color' ] : $defaults[ 'bg_color' ];
+$body       = ( isset( $meta[ 'body_color' ] ) ) ? $meta[ 'body_color' ] : $defaults[ 'body_color' ];
+$base       = ( isset( $meta[ 'base_color' ] ) ) ? $meta[ 'base_color' ] : $defaults[ 'base_color' ];
+$base_text  = wc_light_or_dark( $base, '#202020', '#ffffff' );
+$text       = ( isset( $meta[ 'txt_color' ] ) ) ? $meta[ 'txt_color' ] : $defaults[ 'txt_color' ];
+$link_color = ( isset( $meta[ 'link_color' ] ) ) ? $meta[ 'link_color' ] : '#333333';
 
 // PREMIUM
 $page_width               = ( isset( $meta[ 'page_width' ] ) ) ? $meta[ 'page_width' ] . 'px' : '800px';
@@ -166,13 +168,13 @@ do_action( 'yith_wcet_before_email_styles', $premium_style, $meta, $current_emai
     }
 
     .yith-wcet-socials-icons img{
-    width:20px;
-    height:20px;
+    width:30px;
+    height:30px;
     }
 
     #template_custom_links li.yith-wcet-socials-icons{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     padding: 0 5px;
     float:right;
     }
@@ -303,7 +305,7 @@ do_action( 'yith_wcet_before_email_styles', $premium_style, $meta, $current_emai
     }
 
     a {
-    color: <?php echo esc_attr( $base ); ?>;
+    color: <?php echo esc_attr( $link_color ); ?>;
     font-weight: normal;
     text-decoration: underline;
     }

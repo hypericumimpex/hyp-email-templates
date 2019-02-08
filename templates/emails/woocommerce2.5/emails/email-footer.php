@@ -42,25 +42,9 @@ $social_icon_path      = YITH_WCET_ASSETS_URL . '/images/socials-icons';
 $social_icon_path      .= $use_mini_social_icons ? '-mini/' : '/';
 $social_icon_path      = apply_filters( 'yith_wcet_social_icon_path', $social_icon_path, $use_mini_social_icons, $current_email, 'footer' );
 
-$social_icons = array(
-    'facebook'  => get_option( 'yith-wcet-facebook' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-facebook' ) ) : '',
-    'twitter'   => get_option( 'yith-wcet-twitter' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-twitter' ) ) : '',
-    'google'    => get_option( 'yith-wcet-google' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-google' ) ) : '',
-    'linkedin'  => get_option( 'yith-wcet-linkedin' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-linkedin' ) ) : '',
-    'instagram' => get_option( 'yith-wcet-instagram' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-instagram' ) ) : '',
-    'flickr'    => get_option( 'yith-wcet-flickr' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-flickr' ) ) : '',
-    'pinterest' => get_option( 'yith-wcet-pinterest' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-pinterest' ) ) : '',
-    'youtube'   => get_option( 'yith-wcet-youtube' ) != '' ? 'http://' . str_replace( 'http://', '', get_option( 'yith-wcet-youtube' ) ) : '',
-);
+$social_icons            = yith_wcet_get_socials();
+$at_least_one_social_set = !!array_filter( $social_icons );
 
-
-$at_least_one_social_setted = false;
-foreach ( $social_icons as $social_name => $social_link ) {
-    if ( strlen( $social_link ) > 0 ) {
-        $at_least_one_social_setted = true;
-        break;
-    }
-}
 $premium_mail_style = ( !empty( $meta[ 'premium_mail_style' ] ) ) ? $meta[ 'premium_mail_style' ] : 0;
 
 $footer_social_centered = apply_filters( 'yith_wcet_footer_social_centered', $premium_mail_style != 2, $premium_mail_style, $template );
@@ -118,7 +102,7 @@ $footer_social_centered = apply_filters( 'yith_wcet_footer_social_centered', $pr
         <!-- End Footer -->
     </td>
 </tr>
-<?php if ( $socials_on_footer && $at_least_one_social_setted ) : ?>
+<?php if ( $socials_on_footer && $at_least_one_social_set ) : ?>
     <tr>
         <td id="template_footer_social" align="center" valign="middle">
 
@@ -137,7 +121,7 @@ $footer_social_centered = apply_filters( 'yith_wcet_footer_social_centered', $pr
                             }
                             ?>
                             <td width="32px" class="yith-wcet-socials-icons" style="text-align:center; width:32px !important">
-                                <a href="<?php echo $social_link ?>"><img width="20px" src="<?php echo $social_url ?>"></a>
+                                <a href="<?php echo $social_link ?>"><img width="30" height="30" src="<?php echo $social_url ?>"></a>
                             </td>
                         <?php } ?>
                     <?php endforeach; ?>

@@ -14,11 +14,12 @@ global $current_email;
 $template = yith_wcet_get_email_template( $current_email );
 $meta     = yith_wcet_get_template_meta( $template );
 
-$bg        = ( isset( $meta[ 'bg_color' ] ) ) ? $meta[ 'bg_color' ] : '#F5F5F5';
-$body      = ( isset( $meta[ 'body_color' ] ) ) ? $meta[ 'body_color' ] : '#FFFFFF';
-$base      = ( isset( $meta[ 'base_color' ] ) ) ? $meta[ 'base_color' ] : '#2470FF';
-$base_text = wc_light_or_dark( $base, '#202020', '#ffffff' );
-$text      = ( isset( $meta[ 'txt_color' ] ) ) ? $meta[ 'txt_color' ] : '#000000';
+$bg         = ( isset( $meta[ 'bg_color' ] ) ) ? $meta[ 'bg_color' ] : '#F5F5F5';
+$body       = ( isset( $meta[ 'body_color' ] ) ) ? $meta[ 'body_color' ] : '#FFFFFF';
+$base       = ( isset( $meta[ 'base_color' ] ) ) ? $meta[ 'base_color' ] : '#2470FF';
+$base_text  = wc_light_or_dark( $base, '#202020', '#ffffff' );
+$text       = ( isset( $meta[ 'txt_color' ] ) ) ? $meta[ 'txt_color' ] : '#000000';
+$link_color = ( isset( $meta[ 'link_color' ] ) ) ? $meta[ 'link_color' ] : '#333333';
 
 // PREMIUM
 $page_width               = ( isset( $meta[ 'page_width' ] ) ) ? $meta[ 'page_width' ] . 'px' : '800px';
@@ -261,7 +262,7 @@ do_action( 'yith_wcet_before_email_styles', $premium_style, $meta, $current_emai
     }
 
     a {
-    color: <?php echo esc_attr( $base ); ?>;
+    color: <?php echo esc_attr( $link_color ); ?>;
     font-weight: normal;
     text-decoration: underline;
     }

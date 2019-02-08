@@ -191,6 +191,16 @@ if ( !function_exists( 'yith_wcet_metabox_options_content_premium' ) ) {
                                data-default-color="<?php echo $txt_color_default; ?>" id="yith-wcet-txt-color">
                     </td>
                 </tr>
+
+                <tr>
+                    <td class="yith-wcet-table-title">
+                        <label><?php _e( 'Link Color', 'yith-woocommerce-email-templates' ) ?></label>
+                    </td>
+                    <td class="yith-wcet-table-content">
+                        <input type="text" class="yith-wcet-color-picker" name="_template_meta[link_color]" value="<?php echo $link_color ?>"
+                               data-default-color="<?php echo $link_color_default; ?>" id="yith-wcet-link-color">
+                    </td>
+                </tr>
                 <tr>
                     <td class="yith-wcet-table-title">
                         <label><?php _e( 'Header Color', 'yith-woocommerce-email-templates' ) ?></label>
@@ -559,5 +569,43 @@ if ( !function_exists( 'yith_wcet_light_or_dark' ) ) {
         $brightness = ( ( $c_r * 299 ) + ( $c_g * 587 ) + ( $c_b * 114 ) ) / 1000;
 
         return $brightness > $brightness_limit ? $dark : $light;
+    }
+}
+
+if ( !function_exists( 'yith_wcet_get_socials' ) ) {
+    /**
+     * return a key=>value array with social key => social url
+     *
+     * @return array
+     *
+     * @since 1.3.14
+     */
+    function yith_wcet_get_socials() {
+        $social_keys = array( 'facebook', 'twitter', 'google', 'linkedin', 'instagram', 'flickr', 'pinterest', 'youtube' );
+        $socials     = array();
+        foreach ( $social_keys as $key ) {
+            $key             = sanitize_key( $key );
+            $url             = get_option( "yith-wcet-{$key}", '' );
+            $socials[ $key ] = yith_wcet_parse_link_url( $url );
+        }
+        return $socials;
+    }
+}
+
+if ( !function_exists( 'yith_wcet_parse_link_url' ) ) {
+    /**
+     * parse an url by adding http:// if it's not set
+     *
+     * @param $url
+     *
+     * @return string
+     *
+     * @since 1.3.14
+     */
+    function yith_wcet_parse_link_url( $url ) {
+        if ( $url && strpos( $url, 'http://' ) !== 0 && strpos( $url, 'https://' ) !== 0 ) {
+            $url = 'http://' . $url;
+        }
+        return $url;
     }
 }

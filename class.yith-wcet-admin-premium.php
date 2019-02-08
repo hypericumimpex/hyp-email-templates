@@ -211,6 +211,8 @@ if ( !class_exists( 'YITH_WCET_Admin_Premium' ) ) {
                 'header_position'              => 'center',
                 'header_color'                 => 'transparent',
                 'header_color_default'         => 'transparent',
+                'link_color'                   => '#333333',
+                'link_color_default'           => '#333333',
                 'footer_text_color'            => '#555555',
                 'footer_text_color_default'    => '#555555',
                 'page_border_radius'           => '3',

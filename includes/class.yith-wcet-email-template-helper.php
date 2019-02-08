@@ -230,7 +230,8 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
                 $content = '<style type="text/css">' . $css . '</style>' . $content;
             }
 
-            $content = str_replace( 'yith-wccet-inline-style', 'style', $content );
+            $content = str_replace( 'yith-wccet-inline-style', 'style', $content ); // left for backward compatibility
+            $content = str_replace( 'yith-wccet-style', 'style', $content );
 
             return $content;
         }

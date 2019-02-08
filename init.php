@@ -3,7 +3,7 @@
  * Plugin Name: HYP Email Templates
  * Plugin URI: https://github.com/hypericumimpex/hyp-email-templates/
  * Description: <code><strong>HYP Email Templates</strong></code>  vă permite să stilizați cu ușurință șabloanele de e-mail ale Magazinului. Puteți să personalizați culorile, să setați un logo, pictogramele sociale, legăturile personalizate și așa mai departe, pentru a le face să pară mai profesionale.
- * Version: 1.3.13
+ * Version: 1.3.15
  * Author: YITH
  * Author URI: https://romeocovaci.com/
  * Text Domain: yith-woocommerce-email-templates
@@ -13,7 +13,7 @@
  *
  * @author  Romeo C.
  * @package HYP Email Templates
- * @version 1.3.13
+ * @version 1.3.15
  */
 /*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
 
@@ -49,7 +49,7 @@ yit_deactive_free_version( 'YITH_WCET_FREE_INIT', plugin_basename( __FILE__ ) );
 function yith_wcet_pr_install_woocommerce_admin_notice() {
     ?>
     <div class="error">
-        <p><?php _e( 'HYP Email Templates is enabled but not effective. It requires WooCommerce in order to work.', 'yith-woocommerce-email-templates' ); ?></p>
+        <p><?php _e( 'YITH WooCommerce Email Templates Premium is enabled but not effective. It requires WooCommerce in order to work.', 'yith-woocommerce-email-templates' ); ?></p>
     </div>
     <?php
 }
@@ -61,7 +61,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 
 
 if ( !defined( 'YITH_WCET_VERSION' ) ) {
-    define( 'YITH_WCET_VERSION', '1.3.11' );
+    define( 'YITH_WCET_VERSION', '1.3.15' );
 }
 
 if ( !defined( 'YITH_WCET_PREMIUM' ) ) {
@@ -108,17 +108,13 @@ if ( !defined( 'YITH_WCET_SECRET_KEY' ) ) {
     define( 'YITH_WCET_SECRET_KEY', '5dylgkpXWkuILKJVSFAv' );
 }
 
+if ( !defined( 'YITH_WCET_TEMPLATE_EMAIL_PATH' ) ) {
+    define( 'YITH_WCET_TEMPLATE_EMAIL_PATH', YITH_WCET_TEMPLATE_PATH . '/emails/woocommerce2.5' );
+}
+
 function yith_wcet_pr_init() {
 
     load_plugin_textdomain( 'yith-woocommerce-email-templates', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-
-    if ( !defined( 'YITH_WCET_TEMPLATE_EMAIL_PATH' ) ) {
-        if ( version_compare( WC()->version, '2.5.0', '<' ) ) {
-            define( 'YITH_WCET_TEMPLATE_EMAIL_PATH', YITH_WCET_TEMPLATE_PATH . '/emails/woocommerce2.4' );
-        } else {
-            define( 'YITH_WCET_TEMPLATE_EMAIL_PATH', YITH_WCET_TEMPLATE_PATH . '/emails/woocommerce2.5' );
-        }
-    }
 
     // Load required classes and functions
     require_once( 'functions.yith-wcet.php' );
