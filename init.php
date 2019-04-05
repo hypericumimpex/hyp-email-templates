@@ -3,17 +3,17 @@
  * Plugin Name: HYP Email Templates
  * Plugin URI: https://github.com/hypericumimpex/hyp-email-templates/
  * Description: <code><strong>HYP Email Templates</strong></code>  vă permite să stilizați cu ușurință șabloanele de e-mail ale Magazinului. Puteți să personalizați culorile, să setați un logo, pictogramele sociale, legăturile personalizate și așa mai departe, pentru a le face să pară mai profesionale.
- * Version: 1.3.15
+ * Version: 1.3.16
  * Author: YITH
  * Author URI: https://romeocovaci.com/
  * Text Domain: yith-woocommerce-email-templates
  * Domain Path: /languages/
  * WC requires at least: 3.0.0
- * WC tested up to: 3.5.x
+ * WC tested up to: 3.6.x
  *
  * @author  Romeo C.
  * @package HYP Email Templates
- * @version 1.3.15
+ * @version 1.3.16
  */
 /*  Copyright 2019  Hypericum Impex
 
@@ -61,7 +61,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 
 
 if ( !defined( 'YITH_WCET_VERSION' ) ) {
-    define( 'YITH_WCET_VERSION', '1.3.15' );
+    define( 'YITH_WCET_VERSION', '1.3.16' );
 }
 
 if ( !defined( 'YITH_WCET_PREMIUM' ) ) {

@@ -95,7 +95,6 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
          * get the default template path for email templates
          *
          * @since 1.3.0
-         *
          * @return string
          */
         public function get_default_template_email_path() {
@@ -106,7 +105,6 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
          * get the nearest template path for email templates based on WC version
          *
          * @since 1.3.0
-         *
          * @return string
          */
         public function get_nearest_template_email_path() {
@@ -140,9 +138,7 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
          * locate the template in the plugin based on WC version
          *
          * @param $template
-         *
          * @since 1.3.0
-         *
          * @return string
          */
         public function locate_template_in_plugin( $template ) {
@@ -155,7 +151,6 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
 
         /**
          * Custom Template
-         *
          * Filters wc_get_template for custom templates
          *
          * @return string
@@ -198,7 +193,6 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
 
         /**
          * Mail Content Styling
-         *
          * This func transforms css style of the mail in inline style; and return the content with the inline style
          *
          * @return string
@@ -211,13 +205,11 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
             ob_start();
             wc_get_template( 'emails/email-styles.php' );
             $css = ob_get_clean();
-            
-            if ( $this->supports_emogrifier() ) {
-                if ( !class_exists( 'Emogrifier' ) ) {
-                    include_once WC()->plugin_path() . '/includes/libraries/class-emogrifier.php';
-                }
+
+            if ( $emogrifier_class = $this->get_emogrifier_class() ) {
+
                 try {
-                    $emogrifier = new Emogrifier( $content, $css );
+                    $emogrifier = new $emogrifier_class( $content, $css );
                     if ( method_exists( $emogrifier, 'disableStyleBlocksParsing' ) ) {
                         $emogrifier->disableStyleBlocksParsing();
                     }
@@ -244,6 +236,29 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
          */
         protected function supports_emogrifier() {
             return class_exists( 'DOMDocument' ) && version_compare( PHP_VERSION, '5.5', '>=' );
+        }
+
+        /**
+         * Return if emogrifier library is supported.
+         *
+         * @since 1.3.16
+         * @return string|bool
+         */
+        protected function get_emogrifier_class() {
+            $emogrifier_class = false;
+            if ( $this->supports_emogrifier() ) {
+                if ( !class_exists( 'Emogrifier' ) || !class_exists( '\\Pelago\\Emogrifier' ) ) {
+                    include_once WC()->plugin_path() . '/includes/libraries/class-emogrifier.php';
+                }
+
+                if ( class_exists( 'Emogrifier' ) ) {
+                    $emogrifier_class = 'Emogrifier';
+                } elseif ( class_exists( '\\Pelago\\Emogrifier' ) ) {
+                    $emogrifier_class = '\\Pelago\\Emogrifier';
+                }
+
+            }
+            return $emogrifier_class;
         }
 
         /**
@@ -287,7 +302,6 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
          * @param mixed           $email_heading
          * @param string          $message
          * @param WC_Email|string $email
-         *
          * @return string
          */
         public function wrap_message( $email_heading, $message, $email = '' ) {
@@ -313,7 +327,6 @@ if ( !class_exists( 'YITH_WCET_Email_Template_Helper' ) ) {
  * Unique access to instance of YITH_WCET_Email_Template_Helper class
  *
  * @return YITH_WCET_Email_Template_Helper || YITH_WCET_Email_Template_Helper_Premium
- *
  * @since                                   1.2.0
  */
 function YITH_WCET_Email_Template_Helper() {

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Email Templates\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2019-02-06 14:38:24+00:00\n"
-"PO-Revision-Date: 2018-05-31 21:42+0100\n"
+"POT-Creation-Date: 2019-04-02 13:18:02+00:00\n"
+"PO-Revision-Date: 2019-03-21 12:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: es_ES\n"
@@ -189,9 +189,8 @@ msgid "Text Color"
 msgstr "Color de texto"
 
 #: functions.yith-wcet-premium.php:197
-#, fuzzy
 msgid "Link Color"
-msgstr "Color base"
+msgstr "Color de enlace"
 
 #: functions.yith-wcet-premium.php:206
 msgid "Header Color"
@@ -291,13 +290,16 @@ msgstr "Texto al pie"
 
 #: functions.yith-wcet-premium.php:461 functions.yith-wcet-premium.php:465
 msgid "Additional CSS"
-msgstr ""
+msgstr "CSS adicional"
 
 #: functions.yith-wcet-premium.php:473
 msgid ""
 "Please consider this code snippet will be part of an email, so some CSS code "
 "snippets could not work on any email client"
 msgstr ""
+"Por favor, ten en cuenta que este código de snippet será parte del correo "
+"electrónico, por lo que algunos snippets de código CSS podría no funcionar "
+"en ningún correo de cliente"
 
 #: functions.yith-wcet-premium.php:478 functions.yith-wcet-premium.php:482
 #: functions.yith-wcet.php:135 functions.yith-wcet.php:139
@@ -322,13 +324,12 @@ msgid "Send"
 msgstr "Envíar"
 
 #: functions.yith-wcet-premium.php:506
-#, fuzzy
 msgid ""
 "[You need to publish or update the template before sending the correct test "
 "email]"
 msgstr ""
-"[Necesitas publicar o actualizar la plantilla antes de mostrar la "
-"previsualización correcta]"
+"[Necesitas publicar o actualizar la plantilla antes de enviar el correo de "
+"prueba correcto]"
 
 #: functions.yith-wcet-premium.php:532 functions.yith-wcet.php:171
 msgid "Upload"
@@ -359,7 +360,7 @@ msgstr ""
 "previsualización correcta]"
 
 #: includes/class.yith-wcet-email-template-helper-premium.php:189
-#: includes/class.yith-wcet-email-template-helper.php:267
+#: includes/class.yith-wcet-email-template-helper.php:282
 msgid "HTML Email Template"
 msgstr "Plantilla Email HTML"
 
@@ -402,9 +403,8 @@ msgstr "Selecciona la plantilla que quieres usar para el email %s"
 #: includes/class.yith-wcet-email-template-helper-premium.php:391
 #: includes/class.yith-wcet-email-template-helper-premium.php:393
 #: includes/class.yith-wcet-wp-email.php:18
-#, fuzzy
 msgid "WordPress Emails"
-msgstr "Correo electrónico de prueba"
+msgstr "Correos electrónicos de WordPress"
 
 #: init.php:52
 msgid ""
@@ -445,53 +445,48 @@ msgstr ""
 "correo electrónico."
 
 #: plugin-options/socials-options.php:4
-#, fuzzy
 msgid "Facebook"
-msgstr "URL de página de Facebook"
+msgstr "Facebook"
 
 #: plugin-options/socials-options.php:5
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: plugin-options/socials-options.php:6
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #: plugin-options/socials-options.php:7
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: plugin-options/socials-options.php:8
-#, fuzzy
 msgid "Instagram"
-msgstr "URL del perfil de Instagram"
+msgstr "Instagram"
 
 #: plugin-options/socials-options.php:9
 msgid "Flickr"
-msgstr ""
+msgstr "Flickr"
 
 #: plugin-options/socials-options.php:10
-#, fuzzy
 msgid "Pinterest"
-msgstr "URL del perfil de Pinterest"
+msgstr "Pinterest"
 
 #: plugin-options/socials-options.php:11
 msgid "Youtube"
-msgstr ""
+msgstr "Youtube"
 
 #: plugin-options/socials-options.php:16
 msgid "Social Network Sites Options"
 msgstr "Opciones de páginas de redes sociales"
 
 #: plugin-options/socials-options.php:23
-#, fuzzy
 msgid "%s Profile Url"
-msgstr "URL del perfil de Flickr"
+msgstr "URL de perfil %s"
 
 #: plugin-options/socials-options.php:29
-#, fuzzy
 msgid "%s Custom Icon"
-msgstr "Añadir enlace personalizado"
+msgstr "%s icono personalizado"
 
 #: templates/emails/woocommerce2.5/emails/email-order-details.php:29
 #: templates/emails/woocommerce3.2/emails/email-order-details.php:27
@@ -536,7 +531,6 @@ msgstr "Imagen de producto"
 #: templates/emails/woocommerce3.2/emails/email-order-items.php:47
 #: templates/emails/woocommerce3.4/emails/email-order-items.php:58
 #: templates/emails/woocommerce3.5/emails/email-order-items.php:58
-#, fuzzy
 msgid "Product image"
 msgstr "Imagen de producto"
 
@@ -692,6 +686,12 @@ msgid ""
 "professional. <a href=\"https://yithemes.com/\" target=\"_blank\">Get more "
 "plugins for your e-commerce shop on <strong>YITH</strong></a>"
 msgstr ""
+"<code><strong>YITH WooCommerce Email Templates</strong></code> te permite "
+"estilizar fácilmente las plantillas de correo electrónico de WooCommerce. "
+"Puedes personalizar los colores, establecer un logo, iconos de redes "
+"sociales, enlaces personalizados y mucho más para hacerlos parecer más "
+"profesionales. <a href=\"https://yithemes.com/\" target=\"_blank\">Obtén más "
+"plugins para tu comercio electrónico en <strong>YITH</strong></a>"
 
 #: functions.yith-wcet-premium.php:277
 msgctxt "Text for Add Custom Link button"

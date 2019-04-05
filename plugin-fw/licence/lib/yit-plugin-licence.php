@@ -122,6 +122,7 @@ if ( !class_exists( 'YIT_Plugin_Licence' ) ) {
          * @since 3.0.0
          */
         public function activate_license_notice() {
+            return true;
             if ( $this->_show_activate_license_notice() ) {
                 $products_to_activate = $this->get_to_active_products();
                 if ( !!$products_to_activate ) {

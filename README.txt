@@ -1,6 +1,12 @@
 == Changelog ==
 
-= Version 1.3.15 - Released: 06 Feb 2019 =
+= Version 1.3.16 - Released: 02 Apr 2019 =
+
+* New - support to WooCommerce 3.6
+* Update - language files
+* Update - plugin framework
+
+= Version 1.3.15 - Released: 06 Fec 2019 =
 
 * New - set link color
 * Fix - logo height issue on Outlook

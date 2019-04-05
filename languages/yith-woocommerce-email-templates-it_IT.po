@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Email Templates\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2019-02-06 14:38:24+00:00\n"
-"PO-Revision-Date: 2018-05-08 18:16+0200\n"
+"POT-Creation-Date: 2019-04-02 13:18:02+00:00\n"
+"PO-Revision-Date: 2019-02-20 17:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.13\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
 "_nx_noop:4c,1,2\n"
@@ -59,11 +59,11 @@ msgstr "Email Templates"
 
 #: class.yith-wcet-admin.php:167
 msgid "Add Email Template"
-msgstr "Aggiungi template email"
+msgstr "Aggiungi template per l'email"
 
 #: class.yith-wcet-admin.php:168
 msgid "Add New Email Template"
-msgstr "Aggiungi nuovo template email"
+msgstr "Aggiungi nuovo template per l'email"
 
 #: class.yith-wcet-admin.php:169
 msgid "Edit Email Template"
@@ -120,7 +120,7 @@ msgstr "Logo"
 #: functions.yith-wcet-premium.php:81 functions.yith-wcet.php:79
 msgid "[Upload a new logo, or select the default logo you have set in \""
 msgstr ""
-"[Carica un nuovo logo o seleziona il logo predefinito che hai settato in \""
+"[Carica un nuovo logo o seleziona quello predefinito che hai impostato in \""
 
 #: functions.yith-wcet-premium.php:81 functions.yith-wcet.php:79
 msgid "Email Templates Settings"
@@ -188,9 +188,8 @@ msgid "Text Color"
 msgstr "Colore del testo"
 
 #: functions.yith-wcet-premium.php:197
-#, fuzzy
 msgid "Link Color"
-msgstr "Colore principale"
+msgstr "Colore del link"
 
 #: functions.yith-wcet-premium.php:206
 msgid "Header Color"
@@ -198,7 +197,7 @@ msgstr "Colore dell'intestazione"
 
 #: functions.yith-wcet-premium.php:215
 msgid "Footer Text Color"
-msgstr "Colore del testo nel piè di pagina"
+msgstr "Colore del testo nel footer"
 
 #: functions.yith-wcet-premium.php:226
 msgid "Typography"
@@ -230,7 +229,7 @@ msgstr "Link personalizzati"
 
 #: functions.yith-wcet-premium.php:333
 msgid "Order detail table"
-msgstr "Tabella dei dettagli degli ordini"
+msgstr "Tabella dei dettagli dell'ordine"
 
 #: functions.yith-wcet-premium.php:337
 msgid "Border Width"
@@ -262,7 +261,7 @@ msgstr "Tasti dei Social Network nell'intestazione"
 
 #: functions.yith-wcet-premium.php:404
 msgid "Social network buttons in the footer"
-msgstr "Tasti dei Social Network nel piè di pagina"
+msgstr "Tasti dei Social Network nel footer"
 
 #: functions.yith-wcet-premium.php:412
 msgid "Social network buttons color"
@@ -270,7 +269,7 @@ msgstr "Colore dei tasti dei Social Network"
 
 #: functions.yith-wcet-premium.php:427 templates/premium.php:317
 msgid "Footer"
-msgstr "Piè di pagina"
+msgstr "Footer"
 
 #: functions.yith-wcet-premium.php:431
 msgid "Left Logo"
@@ -281,22 +280,24 @@ msgid ""
 "[Upload a new logo, or select the default logo you have set in \"Email "
 "Templates Settings\"]"
 msgstr ""
-"[Carica un nuovo logo o seleziona il logo predefinito in \"opzioni di Email "
+"[Carica un nuovo logo o seleziona quello predefinito in \"Impostazioni Email "
 "Templates\" ]"
 
 #: functions.yith-wcet-premium.php:451
 msgid "Footer Text"
-msgstr "Testo nel piè di pagina"
+msgstr "Testo del footer"
 
 #: functions.yith-wcet-premium.php:461 functions.yith-wcet-premium.php:465
 msgid "Additional CSS"
-msgstr ""
+msgstr "CSS aggiuntivo"
 
 #: functions.yith-wcet-premium.php:473
 msgid ""
 "Please consider this code snippet will be part of an email, so some CSS code "
 "snippets could not work on any email client"
 msgstr ""
+"Per favore, considera che questo codice snippet farà parte di un'email "
+"pertanto alcuni snippet potrebbero non funzionare su qualche client email"
 
 #: functions.yith-wcet-premium.php:478 functions.yith-wcet-premium.php:482
 #: functions.yith-wcet.php:135 functions.yith-wcet.php:139
@@ -321,12 +322,11 @@ msgid "Send"
 msgstr "Invia"
 
 #: functions.yith-wcet-premium.php:506
-#, fuzzy
 msgid ""
 "[You need to publish or update the template before sending the correct test "
 "email]"
 msgstr ""
-"[Devi pubblicare o aggiornare il template prima di mostrare l'anteprima "
+"[Devi pubblicare o aggiornare il template prima di inviare l'email di prova "
 "corretta]"
 
 #: functions.yith-wcet-premium.php:532 functions.yith-wcet.php:171
@@ -358,7 +358,7 @@ msgstr ""
 "corretta]"
 
 #: includes/class.yith-wcet-email-template-helper-premium.php:189
-#: includes/class.yith-wcet-email-template-helper.php:267
+#: includes/class.yith-wcet-email-template-helper.php:282
 msgid "HTML Email Template"
 msgstr "Template HTML dell'email"
 
@@ -396,14 +396,13 @@ msgstr "Seleziona i template per le email."
 #: includes/class.yith-wcet-email-template-helper-premium.php:382
 #: includes/class.yith-wcet-email-template-helper-premium.php:393
 msgid "Select the email template that you want to use for the %s email"
-msgstr "Seleziona il template che intendi usare per le email %s"
+msgstr "Seleziona il template che intendi usare per l'email %s"
 
 #: includes/class.yith-wcet-email-template-helper-premium.php:391
 #: includes/class.yith-wcet-email-template-helper-premium.php:393
 #: includes/class.yith-wcet-wp-email.php:18
-#, fuzzy
 msgid "WordPress Emails"
-msgstr "Email di prova"
+msgstr "Email WordPress"
 
 #: init.php:52
 msgid ""
@@ -442,53 +441,48 @@ msgid "Use always social mini-icons (30x30 px) in all email templates."
 msgstr "Usa sempre le mini-icone social (30x30 px) in tutti i template email."
 
 #: plugin-options/socials-options.php:4
-#, fuzzy
 msgid "Facebook"
-msgstr "URL della pagina Facebook"
+msgstr "Facebook"
 
 #: plugin-options/socials-options.php:5
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: plugin-options/socials-options.php:6
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #: plugin-options/socials-options.php:7
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: plugin-options/socials-options.php:8
-#, fuzzy
 msgid "Instagram"
-msgstr "Url del profilo Instagram"
+msgstr "Instagram"
 
 #: plugin-options/socials-options.php:9
 msgid "Flickr"
-msgstr ""
+msgstr "Flickr"
 
 #: plugin-options/socials-options.php:10
-#, fuzzy
 msgid "Pinterest"
-msgstr "URL del profilo Pinterest"
+msgstr "Pinterest"
 
 #: plugin-options/socials-options.php:11
 msgid "Youtube"
-msgstr ""
+msgstr "Youtube"
 
 #: plugin-options/socials-options.php:16
 msgid "Social Network Sites Options"
 msgstr "Opzioni dei siti di Social Network"
 
 #: plugin-options/socials-options.php:23
-#, fuzzy
 msgid "%s Profile Url"
-msgstr "URL del profilo Flickr"
+msgstr "URL del profilo %s"
 
 #: plugin-options/socials-options.php:29
-#, fuzzy
 msgid "%s Custom Icon"
-msgstr "Aggiungi link personalizzati"
+msgstr "Icona personalizzata di %s"
 
 #: templates/emails/woocommerce2.5/emails/email-order-details.php:29
 #: templates/emails/woocommerce3.2/emails/email-order-details.php:27
@@ -533,7 +527,6 @@ msgstr "Immagine del prodotto"
 #: templates/emails/woocommerce3.2/emails/email-order-items.php:47
 #: templates/emails/woocommerce3.4/emails/email-order-items.php:58
 #: templates/emails/woocommerce3.5/emails/email-order-items.php:58
-#, fuzzy
 msgid "Product image"
 msgstr "Immagine del prodotto"
 
@@ -690,11 +683,17 @@ msgid ""
 "professional. <a href=\"https://yithemes.com/\" target=\"_blank\">Get more "
 "plugins for your e-commerce shop on <strong>YITH</strong></a>"
 msgstr ""
+"<code><strong>YITH WooCommerce Email Templates</strong></code> ti permette "
+"di stilizzare facilmente il template email di WooCommerce. Puoi "
+"personalizzare i colori, impostare un logo, icone social, link "
+"personalizzati ed altro per renderle più professionali. <a href=\"https://"
+"yithemes.com/\" target=\"_blank\">Ottieni più plugin per il tuo e-commerce "
+"su <strong>YITH</strong></a>"
 
 #: functions.yith-wcet-premium.php:277
 msgctxt "Text for Add Custom Link button"
 msgid "Add Custom Link"
-msgstr "Aggiungi link personalizzati"
+msgstr "Aggiungi link personalizzato"
 
 #: functions.yith-wcet-premium.php:283 functions.yith-wcet-premium.php:307
 msgctxt "Text for the custom link"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Email Templates\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2019-02-06 14:38:24+00:00\n"
+"POT-Creation-Date: 2019-04-02 13:18:02+00:00\n"
 "PO-Revision-Date: 2017-12-01 23:52+0100\n"
 "Last-Translator: Pierre-Yves QUEMENER <contact@py-conseil.bzh>\n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
@@ -361,7 +361,7 @@ msgstr ""
 "prévisualiser]"
 
 #: includes/class.yith-wcet-email-template-helper-premium.php:189
-#: includes/class.yith-wcet-email-template-helper.php:267
+#: includes/class.yith-wcet-email-template-helper.php:282
 msgid "HTML Email Template"
 msgstr "Modèle de courriel HTML"
 

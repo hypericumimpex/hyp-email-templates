@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Email Templates\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2019-02-06 14:38:24+00:00\n"
-"PO-Revision-Date: 2018-12-21 19:58+0000\n"
+"POT-Creation-Date: 2019-04-02 13:18:02+00:00\n"
+"PO-Revision-Date: 2019-02-11 14:51+0000\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
 "_nx_noop:4c,1,2\n"
@@ -189,9 +189,8 @@ msgid "Text Color"
 msgstr "Tekstkleur"
 
 #: functions.yith-wcet-premium.php:197
-#, fuzzy
 msgid "Link Color"
-msgstr "Basiskleur"
+msgstr "Link kleur"
 
 #: functions.yith-wcet-premium.php:206
 msgid "Header Color"
@@ -360,7 +359,7 @@ msgstr ""
 "sjabloon te zien krijgt]"
 
 #: includes/class.yith-wcet-email-template-helper-premium.php:189
-#: includes/class.yith-wcet-email-template-helper.php:267
+#: includes/class.yith-wcet-email-template-helper.php:282
 msgid "HTML Email Template"
 msgstr "HTML E-mail sjabloon"
 
